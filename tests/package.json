@@ -1,0 +1,17 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "axios.test.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha index.test.js"
+  },
+  "author": "Damian Abalos",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "supertest": "^6.2.3"
+  }
+}
