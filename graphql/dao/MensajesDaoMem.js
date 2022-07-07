@@ -3,11 +3,11 @@ export default class MensajesDaoMem {
         this.mensajes = []
     }
 
-    listarmensajes() {
+    listarMensajes() {
         return this.mensajes;
     }
 
-    guardarMensaje(mensaje) {
+    saveMensaje(mensaje) {
         this.mensajes.push(mensaje)
     }
 

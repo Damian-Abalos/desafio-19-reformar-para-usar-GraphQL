@@ -1,3 +1,30 @@
+mutation {
+  nuevoMensaje(
+    datos: {
+      author: {
+        mail: "a@a"
+        nombre: "Pedro"
+        apellido: "Juarez"
+        edad: 52
+        alias: "pepito"
+        avatar: "https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-256.png"
+      }
+      text: "Probando Graphql"
+    }
+  ) {
+    id
+    author {
+      mail
+      nombre
+      apellido
+      edad
+      alias
+      avatar
+    }
+    text
+  }
+}
+
 query {
   listarMensajes {
     id
@@ -15,21 +42,13 @@ query {
 }
 
 mutation {
-  nuevoMensaje(
-    datos: {
-      author: {
-        mail: "a@a"
-        nombre: "Pedro"
-        apellido: "Juarez"
-        edad: 52
-        alias: "pepito"
-        avatar: "https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-256.png"
-      }
-      text: "Probando Graphql"
-      date: "5/7/2022 12:11:21"
-    }
+  nuevoProducto(
+    datos: { nombre: "CARPETAS tapa dura", precio: 2000, stock: 20 }
   ) {
     id
+    nombre
+    precio
+    stock
   }
 }
 
@@ -43,25 +62,14 @@ query {
 }
 
 query {
-  listarProducto(id: "4") {
+  listarProducto(id: "1") {
     id
     nombre
     precio
     stock
-    timestamp
   }
 }
 
-mutation {
-  nuevoProducto(
-    datos: { nombre: "CARPETAS tapa dura", precio: 2000, stock: 20 }
-  ) {
-    id
-    nombre
-    precio
-    stock
-  }
-}
 
 mutation {
   actualizarProducto(
@@ -70,14 +78,12 @@ mutation {
       nombre: "CARPETAS tapa dura"
       precio: 2500
       stock: 10
-      timestamp: "5/7/2022 12:11:21"
     }
   ) {
     id
     nombre
     precio
     stock
-    timestamp
   }
 }
 
